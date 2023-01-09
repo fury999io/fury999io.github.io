@@ -1,0 +1,163 @@
+<h2>Lists</h2>
+<pre>
+
+
+Lists in python are mutable unlike other data types in python.
+That means you can change the elements contained in a list.
+
+Remember that tuples are immutable.
+
+Lists in python are defined using square brackets "[" and "]"
+Lists can store all data types.
+Fun Fact: Lists can store another list in itself. This is known "nested list".
+
+
+
+<h3>Some examples of lists:</h3>
+[]  (Empty list)
+[1, 2, 3, 69]                    (List of integers)
+[1, 6.9, 0.7, 999, 1.01]         (List of integers as well as floating point numbers)
+['s', 'e', 'x']                  (List if characters. Please remember to enclose the strings with '')
+["python", "emacs", "archlinux"] (List of strings. Note!!! Please remember to enclose the strings with "" or '')
+["Fury", 999, 0.1, 'c']          (List containing mixture of several data types)
+
+
+
+<h3>Creating Lists:</h3>
+L = [Value1, Value2, ....]  (This assings a list to the variable L)
+
+Fun fact: Lists containing huge number of elements can be split across several lines as shown:
+L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11, 12, 33, 43, 65, 112, 90812, 21, 0.3, 999,
+0.2, 9.6, 1224, 2038, 751, 233, 54, ....]
+This list is termed as "Long list"
+
+
+
+<h3>Some types of lists (Self Explainatory)</h3>
+The empty list: []
+Long lists      (Mentioned above)
+Nested lists    (Mentioned above)
+
+
+
+<h3>Creating lists from existing sequence</h3>
+Using the function "list()"
+
+L = list("python")
+The string gets stored in the list as ['p', 'y', 't', 'h', 'o', 'n']
+
+
+
+<h3>Taking list input using list() function</h3>
+L = list(input("Enter the elements"))
+Above works only for strings.
+
+
+
+<h4>Accessing Lists</h4>
+To find the length of a list, use the "len()" function. Example n = len(L).
+
+Lists elements can be accessed using Forward as well as Backward indexing.
+
+Forward indexing:
+Begins with 0. First element of the list has index 0. L[0]
+Last element of the list "L" is L[(len(L)-1)]. Has index 1 less than the length of the list.
+
+Backward indexing / Negative indexing:
+Index of the first element is -(length of list). Example: L[-(len(L))]
+Index of the last element is -1. Example: L[-1]
+
+Slicing:
+To fetch elements between indexes a and n:  L[a:n+1]
+To fetch elements between indexes 2 and 7:  L[2:8]
+
+To check the presence of an element in the list:
+'element' in L
+'element' not in L
+
+Change the value of an element in the list:
+L[i] = element
+L[4] = "new value"
+
+Using lists in loops:
+for x in L:
+
+Compare lists:
+L1 == L2
+and so on using other mathematical operators...
+
+
+
+<h3>List operations</h3>
+Joining / Addition:
+L = L1 + L2
+
+Replication / Multiplication:
+L=L*5
+
+Slicing:
+L[0:n]    (Elements from index 0 to index n-1)
+
+Slice steps:
+L[0:9:3]  (Slices elements from index 0 to 8, skipping 3-1=2 elements in between)
+
+True Copy of a list:
+L1=list(L)  or  L1=L.copy()
+
+Add an element in a list:
+L.append(element)
+This adds a new element to the end of the list.
+
+Use extend function:
+L1.extend(L2)
+
+append and extend function can add new elements only at the end of a list. to add an element in a desired index, insert() function is used as follows:
+L.insert(index, element)
+Note: Note pre-existing elements in the same index get shifted to next index number.
+
+
+Removal of an element:
+When index is known,                          L.pop(index)
+When index is not known but element is known, L.remove(element)
+To remove all elements from a list,           L.clear()
+
+To find the index of a known element:
+L.index(element)
+Prints index of first presence of the element in the list
+
+To count the number of entries of an element in the list:
+L.count()
+
+L.reverse()
+
+L.sort()               Sorts the elements in acsending order
+L.sort(reverse=True)   Sorts the elements in decending order
+
+L2 = sorted(L1)
+
+To find minimum, maximum, sum:
+min(L)
+max(L)
+sum(L)
+
+
+
+<h3>Important functions summery</h3>
+list()
+eval()
+len()
+.copy()
+.index()
+.append()
+.extend()
+.insert()
+.pop()
+.remove()
+.clear()
+.count()
+.sort()
+sorted()
+min()
+max()
+sum()
+</pre>
