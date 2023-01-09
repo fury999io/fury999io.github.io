@@ -121,6 +121,9 @@ When index is known,                          L.pop(index)
 When index is not known but element is known, L.remove(element)
 To remove all elements from a list,           L.clear()
 
+To delete a list:
+del L
+
 To find the index of a known element:
 L.index(element)
 Prints index of first presence of the element in the list
@@ -160,4 +163,56 @@ sorted()
 min()
 max()
 sum()
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a name="tuples"><h2>Tuples</h2></a>
+<pre>
+
+
+
+Immutable
+Defined using "(" and ")"
+Can contain all data types including lists and tuple itself.
+
+Tuple creation:
+T = (1, 'a', "python")
+
+Creation of tuuple from existing sequence such as a string or a list or another tuple:
+T = tuple("A string")
+T = tuple(List)
+T = tuple((1, 'a', "python"))
+
+Indexing, accessing through index, finding length, concatenation, slicing, deleting a tuple, min, max, sum, count, sort etc:
+Same as that of lists.
+
+Joining tuples:
+T = T1 + T2 + T3 ....
+
+Unpacking:
+T=(1, 2, 3)
+a, b, c = T
+a, b, c gets assigned the value 1, 2, 3 respectively.
+
+Converting a tuple to list:
+L = list(T)
+
+Indirect modification of a tuple by first converting it into a list, making desired modifications and reconverting the list to a tuple.
+
+<h3>Nested tuples</h3>
+Suppose you have a tuple containing with 2 other tuple inside it
+T=(("Student1", "Student2", "Student3"), (1, 2, 3))
+These are inner tuples. The first inner tuple consists of student names and the second contain their roll numbers
+
+The elements inside the inner tuples can be obtained in the following way:
+T[0][1]   This prints "Student2"
+T[1][2]   This prints 3
 </pre>
