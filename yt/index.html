@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <style>
+      .video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+      }
+      .video-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        width: 50%;
+        margin-top: 20px;
+      }
+      h3, p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>YewTube</h1>
+  <hr>
+<br>
+    <input type="text" id="video-url" placeholder="Paste video url">
+    <button id="play-button">Play</button><br><br><i>Url must be in the form: https://www.youtube.com/watch?v=</i>
+    <div class="video-container">
+      <iframe id="video-player" width="940" height="528.75" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-info">
+      <h3 id="video-title"></h3>
+      <p id="video-description"></p>
+      <p id="video-likes"></p>
+      <p id="video-duration"></p>
+      <p id="video-language"></p>
+    </div>
+  </body>
+  <script>
+    document.getElementById("play-button").addEventListener("click", function() {
+      var videoUrl = document.getElementById("video-url").value;
+      var videoId = videoUrl.split("v=")[1];
+      document.getElementById("video-player").src = "https://www.youtube.com/embed/" + videoId;
+      // Add the following code to retrieve additional information about the video:
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://www.googleapis.com/youtube/v3/videos?id=" + videoId + "&key=YOUR_API_KEY&part=snippet,statistics");
+      xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          var response = JSON.parse(this.responseText);
+          var video = response.items[0];
+          document.getElementById("video-title").innerText = video.snippet.title;
+          document.getElementById("video-description").innerText = video.snippet.description;
+          document.getElementById("video-likes").innerText = "Likes: " + video.statistics.likeCount;
+          document.getElementById("video-duration").innerText = "Duration: " + video.contentDetails.duration;
+          document.getElementById("video-language").innerText = "Language: " + video.snippet.defaultAudioLanguage;
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</html>

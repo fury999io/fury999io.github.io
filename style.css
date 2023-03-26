@@ -1,0 +1,40 @@
+body {
+  background-color: #111;
+  color: #e6e6e6;
+  font-family: monospace;
+  font-size: 140%;
+  max-width: 1000px;
+  margin: auto;
+}
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+}
+
+a:link {
+    color: #4d4dff;
+}
+a:visited {
+  color: #4d4dff;
+}
+
+a:link:active, a:visited:active {
+    color: #4d4dff;
+}
+div.scrollable {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+table.fixed {
+  table-layout: fixed;
+}

@@ -1,0 +1,336 @@
+<h2>Lists</h2>
+<pre>
+
+
+Lists in python are mutable unlike other data types in python.
+That means you can change the elements contained in a list.
+
+Remember that tuples are immutable.
+
+Lists in python are defined using square brackets "[" and "]"
+Lists can store all data types.
+Fun Fact: Lists can store another list in itself. This is known "nested list".
+
+
+
+<h3>Some examples of lists:</h3>
+[]  (Empty list)
+[1, 2, 3, 69]                    (List of integers)
+[1, 6.9, 0.7, 999, 1.01]         (List of integers as well as floating point numbers)
+['s', 'e', 'x']                  (List if characters. Please remember to enclose the strings with '')
+["python", "emacs", "archlinux"] (List of strings. Note!!! Please remember to enclose the strings with "" or '')
+["Fury", 999, 0.1, 'c']          (List containing mixture of several data types)
+
+
+
+<h3>Creating Lists:</h3>
+L = [Value1, Value2, ....]  (This assings a list to the variable L)
+
+Fun fact: Lists containing huge number of elements can be split across several lines as shown:
+L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11, 12, 33, 43, 65, 112, 90812, 21, 0.3, 999,
+0.2, 9.6, 1224, 2038, 751, 233, 54, ....]
+This list is termed as "Long list"
+
+
+
+<h3>Some types of lists (Self Explainatory)</h3>
+The empty list: []
+Long lists      (Mentioned above)
+Nested lists    (Mentioned above)
+
+
+
+<h3>Creating lists from existing sequence</h3>
+Using the function "list()"
+
+L = list("python")
+The string gets stored in the list as ['p', 'y', 't', 'h', 'o', 'n']
+
+
+
+<h3>Taking list input using list() function</h3>
+L = list(input("Enter the elements"))
+Above works only for strings.
+
+
+
+<h4>Accessing Lists</h4>
+To find the length of a list, use the "len()" function. Example n = len(L).
+
+Lists elements can be accessed using Forward as well as Backward indexing.
+
+Forward indexing:
+Begins with 0. First element of the list has index 0. L[0]
+Last element of the list "L" is L[(len(L)-1)]. Has index 1 less than the length of the list.
+
+Backward indexing / Negative indexing:
+Index of the first element is -(length of list). Example: L[-(len(L))]
+Index of the last element is -1. Example: L[-1]
+
+Slicing:
+To fetch elements between indexes a and n:  L[a:n+1]
+To fetch elements between indexes 2 and 7:  L[2:8]
+
+To check the presence of an element in the list:
+'element' in L
+'element' not in L
+
+Change the value of an element in the list:
+L[i] = element
+L[4] = "new value"
+
+Using lists in loops:
+for x in L:
+
+Compare lists:
+L1 == L2
+and so on using other mathematical operators...
+
+
+
+<h3>List operations</h3>
+Joining / Addition:
+L = L1 + L2
+
+Replication / Multiplication:
+L=L*5
+
+Slicing:
+L[0:n]    (Elements from index 0 to index n-1)
+
+Slice steps:
+L[0:9:3]  (Slices elements from index 0 to 8, skipping 3-1=2 elements in between)
+
+True Copy of a list:
+L1=list(L)  or  L1=L.copy()
+
+Add an element in a list:
+L.append(element)
+This adds a new element to the end of the list.
+
+Use extend function:
+L1.extend(L2)
+
+append and extend function can add new elements only at the end of a list. to add an element in a desired index, insert() function is used as follows:
+L.insert(index, element)
+Note: Note pre-existing elements in the same index get shifted to next index number.
+
+
+Removal of an element:
+When index is known,                          L.pop(index)
+When index is not known but element is known, L.remove(element)
+To remove all elements from a list,           L.clear()
+
+To delete a list:
+del L
+
+To find the index of a known element:
+L.index(element)
+Prints index of first presence of the element in the list
+
+To count the number of entries of an element in the list:
+L.count()
+
+L.reverse()
+
+L.sort()               Sorts the elements in acsending order
+L.sort(reverse=True)   Sorts the elements in decending order
+
+L2 = sorted(L1)
+
+To find minimum, maximum, sum:
+min(L)
+max(L)
+sum(L)
+
+
+
+<h3>Important functions summery</h3>
+list()
+eval()
+len()
+.copy()
+.index()
+.append()
+.extend()
+.insert()
+.pop()      removes all occurences of the item
+.remove()   removes first occurence of of the item
+.clear()
+.count()
+.sort()
+sorted()
+min()
+max()
+sum()
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a name="tuples"><h2>Tuples</h2></a>
+<pre>
+
+
+
+Immutable
+Defined using "(" and ")"
+Can contain all data types including lists and tuple itself.
+
+Tuple creation:
+T = (1, 'a', "python")
+
+Creation of tuuple from existing sequence such as a string or a list or another tuple:
+T = tuple("A string")
+T = tuple(List)
+T = tuple((1, 'a', "python"))
+
+Indexing, accessing through index, finding length, concatenation, slicing, deleting a tuple, min, max, sum, count, sort etc:
+Same as that of lists.
+
+Joining tuples:
+T = T1 + T2 + T3 ....
+
+Unpacking:
+T=(1, 2, 3)
+a, b, c = T
+a, b, c gets assigned the value 1, 2, 3 respectively.
+
+Converting a tuple to list:
+L = list(T)
+
+Indirect modification of a tuple by first converting it into a list, making desired modifications and reconverting the list to a tuple.
+
+<h3>Nested tuples</h3>
+Suppose you have a tuple containing with 2 other tuple inside it
+T=(("Student1", "Student2", "Student3"), (1, 2, 3))
+These are inner tuples. The first inner tuple consists of student names and the second contain their roll numbers
+
+The elements inside the inner tuples can be obtained in the following way:
+T[0][1]   This prints "Student2"
+T[1][2]   This prints 3
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a name="functions"><h2>Functions</h2></a>
+<pre>
+
+
+
+3 types of functions:
+Modules
+Built In
+User Defined
+
+
+
+<h3>Modules</h3>
+Module is a file containing python functions.
+
+We use the following keywords while importing a module:
+import
+from
+
+
+To import an entire module:
+import math
+
+To import a specific function from a module:
+from math import sqrt
+
+
+Functions in the math module:
+remember to use math. before every function. example: math.ceil()
+
+ceil(x)    ceil(-45.17)    -45
+           ceil(100.12)    101.0
+           ceil(100.72)    101.0
+
+floor(x)   floor(-45.17)   -46
+           floor(100.12)   100.0
+           floor(100.72)   100.0
+
+exp(x)     exp(-45.17)     2.41500621326e-20
+           exp(100.12)     3.03084361407e+43
+           exp(100.72)     5.52255713025e+43
+
+log(x)     log(100.12)     4.60636946656
+
+log10(x)   log10(100.12)   2.00052084094
+
+pow(x, y)  pow(100, 2)     10000.0
+           pow(100, -2)    0.0001
+
+sqrt(x)
+
+sin(x)
+cos(x)
+tan(x)
+cot(x)
+sec(x)
+cosec(x)
+
+degrees(x)  converts radians to degrees
+radians(x)  converts degrees to radians
+
+
+Functions in random module:
+remember to use random. before every function. example: random.random()
+
+random()          returns a random floating point number
+
+randint(1, 10)    5
+
+uniform (a,b)     returns a floating point number x, such that: "a <= x < b"
+
+randrange([start,] stop [,step])  randrange(100,1000,3)   150
+
+
+
+Some other modules: string, time, date
+
+
+
+<h3>Built in Functions</h3>
+
+abs(x)   Prints the absolute value of x regardless of sign
+
+max( x, y, z, .... )
+
+min( x, y, z, .... )
+
+cmp( x, y )                   cmp(80, 100)      -1
+                              cmp(180, 100)      1
+
+range (start, stop[, step])   range(0, 30, 5)    [0, 5, 10, 15, 20, 25]
+
+len()
+
+round()                       round(80.23456, 2)      80.23
+                              round(-100.000056, 3)  -100.0
+
+
+
+<h3>User defined functions</h3>
+
+def function1():
+    return "get lost"
+
+function()
+
+function(parameters)
+</pre>
