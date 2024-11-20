@@ -2,13 +2,13 @@
 <rss version="2.0">
   <channel>
     <title>fury999io (personal site)</title>
-    <link>https://fury999io.vern.cc/blogs</link>
+    <link>https://fury999.ddns.net/blogs</link>
     <description>Blogs and updates from fury999io</description>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 May 2024 12:00:00 GMT</lastBuildDate>
     <item>
       <title>My first blog</title>
-      <link>https://fury999io.vern.cc/blogs/my-first-blog.html</link>
+      <link>https://fury999.ddns.net/blogs/my-first-blog.html</link>
       <description>Greetings everyone. This is the very first blog I am ever posting on my personal site as a test. Thanks for stopping by.</description>
       <pubDate>Thu, 08 May 2024 12:20:00 GMT</pubDate>
     </item>
